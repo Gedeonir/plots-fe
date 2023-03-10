@@ -1,9 +1,7 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import AppRoutes from "./routes";
-import "./index.css";
 
-// require('dotenv').config()
 const App = () => {
   return (
     <BrowserRouter>
