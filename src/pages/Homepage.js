@@ -1,53 +1,17 @@
-// import React from 'react'
+import React from 'react'
+import Banners from '../components/Banners'
+import Cards from '../components/Cards'
+import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
 
-// export default function Homepage() {
-//   return (
-//     <div className='flex justify-center p-3'>
-
-//          <div className='font-bold py-4 px-4'>Count: 0</div>
-
-//          <button className='bg-black rounded-lg p-2 mx-5 text-white font-bold'>Increase Count</button>
-
-//          <button className='bg-black rounded-lg p-2 mx-5 text-white font-bold'>Decrease Count</button>
-
-//       </div>
-//   )
-// }
-
-import React from "react"
-
-
-import { connect } from "react-redux"
-
-import {
-  increaseCounter,
-  decreaseCounter,
-} from "../redux/Actions/counterActions"
-
-function App(props) {
+export default function Homepage() {
   return (
-    <div className="flex justify-center p-3">
-      <div className="font-bold py-4 px-4">Count: {props.count}</div>
-
-      <button className='bg-black rounded-lg p-2 mx-5 text-white font-bold' onClick={() => props.increaseCounter()}>Increase Count</button>
-
-      <button className='bg-black rounded-lg p-2 mx-5 text-white font-bold' onClick={() => props.decreaseCounter()}>Decrease Count</button>
+    <div className='block min-h-screen bg-gray-50 dark:bg-slate-900'>
+      <NavBar/>
+      <Banners/>
+      <Cards section="Upcoming plots"/>
+      <Cards section="Recent plots"/>
+      <Footer/>
     </div>
   )
 }
-
-const mapStateToProps = state => {
-  return {
-    count: state.counter.count,
-  }
-}
-
-const mapDispatchToProps = dispatch => {
-  return {
-    increaseCounter: () => dispatch(increaseCounter()),
-
-    decreaseCounter: () => dispatch(decreaseCounter()),
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(App)
