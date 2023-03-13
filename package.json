@@ -48,6 +48,7 @@
     "react-icons": "^4.8.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.8.2",
+    "react-swipeable": "^7.0.0",
     "react-toggle-dark-mode": "^1.1.1",
     "redux": "^4.2.1"
   }

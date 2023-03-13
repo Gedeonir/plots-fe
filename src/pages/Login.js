@@ -8,7 +8,7 @@ export default function Login() {
   return (
     <div className='block min-h-screen bg-gray-50 dark:bg-slate-900'>
         <NavBar/>
-        <div className='block py-8'>
+        <div className='block py-8 px-3'>
 
             <section className="bg-gray-50 dark:bg-slate-800 lg:max-w-6xl mx-auto rounded-2xl drop-shadow-lg shadow-sm">
                 <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
@@ -24,13 +24,13 @@ export default function Login() {
                         className="absolute inset-0 h-full w-full object-cover opacity-90"
                     />
 
-                    <div className="hidden lg:relative lg:block lg:p-12">
+                    <div className="hidden lg:relative lg:block lg:p-12 ">
                         <a className="title-font font-bold items-center text-gray-900 mb-4 md:mb-0 text-center">
                             <span className="text-6xl text-gray-300">Pl<span className='text-rose-700'>ots</span></span>
                         </a>
 
                         <h2 className="mt-6 text-2xl font-bold text-gray-300 sm:text-3xl md:text-4xl">
-                        Welcome to back plots website
+                        Welcome back plots website
                         </h2>
 
                     </div>
@@ -41,7 +41,7 @@ export default function Login() {
                     className="flex items-center dark:bg-slate-800 justify-center sm:px-12 lg:col-span-7 lg:py-2 lg:px-6 xl:col-span-6"
                     >
                         
-                        <div className=" w-full">
+                        <div className=" w-full px-2 py-3">
                             <h1 className='mb-3 text-3xl text-gray-900 dark:text-gray-300'>Login into your account</h1>
 
                             <form action="" className="mx-auto mt-8 mb-0 space-y-4 w-full h-full dark:text-gray-300">

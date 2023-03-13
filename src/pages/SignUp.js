@@ -7,7 +7,7 @@ export default function SignUp() {
   return (
     <div className='block min-h-screen bg-gray-50 dark:bg-slate-900'>
       <NavBar/>
-      <div className='block py-8'>
+      <div className='block py-8 px-3'>
         <section className="bg-gray-50 lg:max-w-6xl mx-auto rounded-2xl drop-shadow-lg shadow-sm">
             <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
                 <section
@@ -38,8 +38,8 @@ export default function SignUp() {
                 aria-label="Main"
                 className="flex items-center dark:bg-slate-800 justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:py-12 lg:px-16 xl:col-span-6"
                 >
-                <div className="max-w-xl lg:max-w-3xl">
-                    <h1 className='text-3xl text-gray-900 dark:text-gray-300'>Create a new account</h1>
+                <div className="max-w-xl lg:max-w-3xl px-3">
+                    <h1 className='lg:text-3xl text-gray-900 dark:text-gray-300 sm:text-sm'>Create a new account</h1>
 
                     <form action="#" className="mt-8 grid grid-cols-6 gap-6 bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-gray-300">
                     <div className="col-span-6 sm:col-span-3">

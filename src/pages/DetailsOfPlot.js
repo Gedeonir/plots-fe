@@ -13,24 +13,24 @@ export default function DetailsOfPlot() {
   return (
     <div className='block min-h-screen bg-gray-50 dark:bg-slate-900'>
         <NavBar/>
-        <div className='block py-8'>
+        <div className='block py-8 px-3'>
 
             <section className="bg-gray-50 dark:bg-slate-800 lg:max-w-6xl mx-auto rounded-2xl drop-shadow-lg shadow-sm">
                 <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
                     <section
-                    className="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6 "
+                    className="relative flex h-72 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6 "
                     >
                         <img
                             alt="Night"
                             src={Rurasugiye}
-                            className="absolute inset-0 h-full w-full object-cover opacity-90"
+                            className="absolute inset-0 h-full w-full object-cover items-center opacity-90"
                         />
 
                     </section>
 
                     <main
                     aria-label="Main"
-                    className="dark:bg-slate-800 justify-center sm:px-12 lg:col-span-7 lg:py-2 lg:px-8 xl:col-span-6"
+                    className="dark:bg-slate-800 justify-center px-6 lg:col-span-7 py-4 lg:px-8 xl:col-span-6"
                     >
                         <div className='flex justify-between'>
                             <h1 className='text-left py-4 text-2xl text-gray-900 dark:text-gray-300'>About this event</h1>
@@ -51,7 +51,7 @@ export default function DetailsOfPlot() {
                             </div>
                         </div>
                         <div className='py-2 w-full'>
-                            <h3 className="text-sm font-medium text-center text-gray-900 uppercase dark:text-gray-300 mx-4">CONCERT RURASUGIYE BY IBIHAME BY’IMANA</h3>
+                            <h3 className="text-sm font-medium text-left text-gray-900 uppercase dark:text-gray-300">CONCERT RURASUGIYE BY IBIHAME BY’IMANA</h3>
 
                         </div>
                         <div className='flex justify-start gap-4 py-2'>
@@ -119,21 +119,21 @@ export default function DetailsOfPlot() {
                            
                         </div>
                         <div className="lg:grid lg:grid-cols-3 gap-2 w-full my-4">
-                            <div className='border border-rose-700 px-2 py-2 rounded-lg'>
+                            <div className='border border-rose-700 px-2 py-2 rounded-lg my-2'>
                                 <label className='text-xs font-normal text-gray-500 dark:text-gray-400 uppercase'>REGULAR</label>
                                 <div className='flex justify-between'>
                                     <h3 className="text-lg font-medium text-gray-900 dark:text-gray-300">5000 RF</h3>
                                     <button className='bg-rose-700 px-4 rounded-lg text-gray-300 hover:bg-transparent border border-red-700 transition-all duration-150 text-xs py-1'>Buy</button>
                                 </div>
                             </div>
-                            <div className='border border-rose-700 px-2 py-2 rounded-lg'>
+                            <div className='border border-rose-700 px-2 py-2 rounded-lg my-2'>
                                 <label className='text-xs font-normal text-gray-500 dark:text-gray-400 uppercase'>VIP</label>
                                 <div className='flex justify-between'>
                                     <h3 className="text-lg font-medium text-gray-900 dark:text-gray-300">50000 RF</h3>
                                     <button className='bg-rose-700 px-4 rounded-lg text-gray-300 hover:bg-transparent border border-red-700 transition-all duration-150 text-xs py-1'>Buy</button>
                                 </div>
                             </div>
-                            <div className='border border-rose-700 px-2 py-2 rounded-lg'>
+                            <div className='border border-rose-700 px-2 py-2 rounded-lg my-2'>
                                 <label className='text-xs font-normal text-gray-500 dark:text-gray-400 uppercase'>VVIP Table of 6</label>
                                 <div className='flex justify-between'>
                                     <h3 className="text-lg font-medium text-gray-900 dark:text-gray-300">300000 RF</h3>
