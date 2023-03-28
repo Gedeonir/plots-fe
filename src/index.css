@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap'); */
 
 @tailwind base;
 
@@ -6,47 +6,31 @@
 
 @tailwind utilities;
 
-@layer base {
+/* @layer base {
     html {
-        font-family: Concert One;
+      font-family: 'Krona One', sans-serif;
+
     }
+} */
+
+@layer utilities {
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+   
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+  }
+
 }
 
-.cards-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  
-  .cards {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .card {
-    width: 600px;
-    height: 400px;
-    background-color: white;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    margin: 0 20px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-  
-  .card img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 5px;
-  }
-  
-  .content {
-    margin-left: 30px;
-  }
+
+
+
+
   
