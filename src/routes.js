@@ -5,8 +5,8 @@ import Homepage from "./pages/Homepage";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import DetailsOfPlot from "./pages/DetailsOfPlot";
-import Layout from "./components/Layout";
-import PlotsModal from "./components/PlotsModal";
+import Notifications from "./pages/Notifications";
+
 
 const AppRoutes = (prop) => {
   
@@ -17,7 +17,7 @@ const AppRoutes = (prop) => {
           <Route path="login-into-your-account" element={<Login />} />
           <Route path="create-new-account" element={<SignUp />} />
           <Route path="plots/1/details" element={<DetailsOfPlot/>} />
-          <Route path="Modal" element={<PlotsModal/>} />
+          <Route path="notifications" element={<Notifications/>} />
         </Routes>
       </div>
     );

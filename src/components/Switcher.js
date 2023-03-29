@@ -19,6 +19,7 @@ export default function Switcher() {
 				checked={darkSide}
 				onChange={toggleDarkMode}
 				size={28}
+				className="text-text_secondary"
 			/>
 		</>
 	);

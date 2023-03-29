@@ -6,7 +6,8 @@ import {GiSettingsKnobs} from 'react-icons/gi'
 import {TbDots} from 'react-icons/tb'
 import { Link } from 'react-router-dom'
 
-export default function Sidebar(props) {    
+
+export default function Sidebar(props) {
     return (
         <div className="pl-4 fixed min-h-screen hidden lg:block w-1/5 top-0">
             <div className="h-16 w-full items-center lg:flex hidden text-lg">
@@ -32,32 +33,32 @@ export default function Sidebar(props) {
                 <span>SWIPLOT</span>
             </div>
             <ul className="mt-12 font-semibold">
-                <li className="flex w-full rounded-l-full py-2 pl-5 justify-between text-text_primary hover:text-gray-500 cursor-pointer items-center mb-6 bg-secondary">
+                <li className="flex w-full rounded-l-full py-2 pl-5 justify-between text-text_secondary hover:text-opacity-70 cursor-pointer items-center mb-6">
                     <Link to="/" className="flex items-center">
-                    <CiGrid41 size={30}/>
+                        <CiGrid41 size={30}/>
                         <span className="text-lg  ml-2">Home</span>
                     </Link>
                 </li>
-                <li className="flex w-full justify-between rounded-l-full py-2 pl-5 text-text_secondary cursor-pointer items-center mb-6">
+                <li className="flex w-full justify-between rounded-l-full py-2 pl-5 text-text_secondary hover:text-opacity-70 cursor-pointer items-center mb-6">
                     <Link className="flex items-center">
                         <CiSearch size={30}/>
                         <span className="text-lg  ml-2">Search</span>
                     </Link>
                 </li>
-                <li className="flex w-full justify-between rounded-l-full py-2 pl-5 text-text_secondary cursor-pointer items-center mb-6">
+                <li className="flex w-full justify-between rounded-l-full py-2 pl-5 text-text_secondary hover:text-opacity-70 cursor-pointer items-center mb-6">
                     <div className="flex items-center">
                         <RiBarcodeLine size={30}/>
                         <span className="text-lg  ml-2">Saved plots</span>
                     </div>
                 </li>
-                <li className="flex w-full justify-between rounded-l-full py-2 pl-5 text-text_secondary cursor-pointer items-center mb-6">
+                <li className="flex w-full justify-between rounded-l-full py-2 pl-5 text-text_secondary hover:text-opacity-70 cursor-pointer items-center mb-6">
                     <div className="flex items-center">
                         <FiMessageSquare size={30}/>
                         <span className="text-lg  ml-2">Messages</span>
                     </div>
                 </li>
             
-                <li className="flex w-full justify-between rounded-l-full py-2 pl-5 text-text_secondary cursor-pointer items-center">
+                <li className="flex w-full justify-between rounded-l-full py-2 pl-5 text-text_secondary hover:text-text_secondary_2 cursor-pointer items-center">
                     <div className="flex items-center">
                         <GiSettingsKnobs size={30}/>
                         <span className="text-lg  ml-2">Settings</span>

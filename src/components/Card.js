@@ -20,7 +20,7 @@ export default function Card(props) {
 
   return (
         // <Link to="/plots/1/details" className='hover:opacity-80 transition-all duration-700'>
-            <div className="mx-2.5 relative h-96 ease-in drop-shadow-lg shadow-lg  rounded-lg mb-4 overflow-hidden">
+            <div className="mx-2.5 relative h-96 ease-in drop-shadow-lg shadow-lg  rounded-lg mb-4 overflow-hidden text-text_primary">
             
             <div style={{backgroundColor:`${props.bg}`}} className="w-full h-full absolute rounded-lg blur-3xl opacity-50"/>
                 
@@ -35,8 +35,8 @@ export default function Card(props) {
                 <div className="flex justify-start gap-2 mt-2 relative px-2">
                     <div className="h-8 rounded-full w-8 bg-[url(https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?cs=srgb&dl=pexels-wolfgang-2747449.jpg&fm=jpg)] bg-cover bg-center bg-no-repeat"></div>
                     <div className="block">
-                        <p className="text-md font-bold ">IG</p>
-                        <p className="text-sm font-medium">12 minutes</p>
+                        <p className="text-md font-bold">IG</p>
+                        <p className="text-sm font-light">12 minutes</p>
                     </div>
                 </div>
                 <div className="flex justify-start gap-2 my-2 relative px-2 cursor-pointer " onClick={()=>setSavedItem(!savedItem)}>

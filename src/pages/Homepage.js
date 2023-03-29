@@ -13,8 +13,11 @@ export default function Homepage() {
   return (
     <Layout>
       <NavBar/>
-      <Cards category="Upcomings Plots"/>
-      <Cards category="Recent Plots"/> 
+      <div className='px-3 pb-24 w-full mx-auto relative max-h-screen overflow-y-scroll'>
+        <Cards category="Upcomings Plots"/>
+        <Cards category="Recent Plots"/> 
+      </div>
+      
     </Layout>
   )
 }

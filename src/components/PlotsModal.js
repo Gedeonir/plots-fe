@@ -41,8 +41,8 @@ export default function PlotsModal(props) {
         })
     },[])
   return (
-    <div className="py-8 bg-secondary transition delay-1000 ease-in-out z-10 fixed top-0 right-0 bottom-0 left-0 bg-opacity-80" id="modal">
-        <div role="alert" className="container relative mx-auto my-4 lg:w-11/12 md:w-2/3 sm:w-full max-w-lg bg-secondary px-4 py-3 rounded-lg shadow-lg drop-shadow-lg min-h-full">
+    <div className="py-4 bg-secondary transition delay-1000 ease-in-out z-10 fixed top-0 right-0 bottom-0 left-0 bg-opacity-80" id="modal">
+        <div role="alert" className="container relative mx-auto my-2 lg:w-11/12 md:w-2/3 sm:w-full max-w-lg bg-secondary px-4 py-3 rounded-lg shadow-lg drop-shadow-lg min-h-full">
             {section==='post'&&
                 <>
                 <div className='sticky '>
@@ -96,7 +96,7 @@ export default function PlotsModal(props) {
                     <div className="block w-full my-4">
                         <label for="Title" className="text-text_secondary font-bold text-lg">Date & Time</label>
                         <div className="lg:grid lg:grid-cols-2 gap-1 w-full mx-auto my-4 pr-2">
-                            <div className='border border-1 border-text_secondary_2 px-2 py-2 rounded-lg my-2'>
+                            <div className='px-2 py-2 rounded-lg my-2'>
                                 <label className='text-xs font-bold text-text_primary dark:text-gray-400 uppercase'>From</label>
                                 <div className='flex justify-between'>
                                     <DateTimePicker 
@@ -111,7 +111,7 @@ export default function PlotsModal(props) {
                                    />
                                 </div>
                             </div>
-                            <div className='border border-1 border-text_secondary_2 px-2 py-2 rounded-lg my-2'>
+                            <div className='px-2 py-2 rounded-lg my-2'>
                                 <label className='text-xs font-bold text-text_primary dark:text-gray-400 uppercase'>From</label>
                                 <div className='flex justify-between'>
                                     <DateTimePicker 
