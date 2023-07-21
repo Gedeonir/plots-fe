@@ -41,14 +41,14 @@ export default function PlotsModal(props) {
         })
     },[])
   return (
-    <div className="py-4 bg-secondary transition delay-1000 ease-in-out z-10 fixed top-0 right-0 bottom-0 left-0 bg-opacity-80" id="modal">
-        <div role="alert" className="container relative mx-auto my-2 lg:w-11/12 md:w-2/3 sm:w-full max-w-lg bg-secondary px-4 py-3 rounded-lg shadow-lg drop-shadow-lg min-h-full">
+    <div className="bg-secondary transition delay-1000 ease-in-out z-40 fixed top-0 right-0 bottom-0 left-0 bg-opacity-80" id="modal">
+        <div role="alert" className="relative mx-auto lg:w-11/12 md:w-2/3 sm:w-full max-w-lg bg-secondary rounded-lg shadow-lg drop-shadow-lg min-h-screen">
             {section==='post'&&
                 <>
-                <div className='sticky '>
-                    <div className=' flex justify-between text-text_secondary'>
+                <div className='sticky px-4'>
+                    <div className=' flex justify-between text-text_secondary px-4 py-4'>
                         <div className="w-full">
-                            <h1 className=" font-lg font-bold tracking-normal leading-tight mb-4 text-center">Create plot</h1>
+                            <h1 className=" font-lg font-bold tracking-normal leading-tight mb-4">Create plot</h1>
                         </div>
                         <div className="cursor-pointer text-gray-400 hover:text-gray-600 transition duration-150 ease-in-out" onClick={()=>props.setOpenModal(false)}>
                             <svg xmlns="http://www.w3.org/2000/svg" aria-label="Close" className="icon icon-tabler icon-tabler-x" width={20} height={20} viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -58,7 +58,7 @@ export default function PlotsModal(props) {
                             </svg>
                         </div>
                     </div>
-                    <div className="flex justify-between">
+                    <div className="flex justify-between px-4">
                         <div className="flex justify-start gap-2 mt-2 relative">
                             <div className="h-12 rounded-full w-12 bg-[url(https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?cs=srgb&dl=pexels-wolfgang-2747449.jpg&fm=jpg)] bg-cover bg-center bg-no-repeat"></div>
                             <div className="block">
@@ -74,21 +74,26 @@ export default function PlotsModal(props) {
                     
                     
                 </div>
-                <div className="relative py-8 rounded h-96 overscroll-y-contain overflow-y-scroll">
+                <div className="relative py-8 rounded h-96 overscroll-y-contain overflow-y-scroll px-4 min-h-screen pb-36">
                     <div className="py-2 px-4 rounded-t-lg dark:bg-gray-800">
-                        <label for="comment" className="sr-only">Plot description</label>
                         <textarea id="comment" rows="4" className="px-2 w-full text-sm text-text_secondary drop-shadow bg-secondary border-0 " placeholder="Describe your plot..." required></textarea>
                     </div>
                     {images.length===0?(<DropImage onDrop={onDrop} accept={"image/*"}/>):(<ImageGrid images={images} setImages={setImages}/>)}
 
                     <div className="block w-full my-4">
-                        <label for="Title" className="text-text_secondary font-bold text-lg">Ticket Packages</label>
+                        <div className='flex justify-between'>
+                            <label for="Title" className="text-text_secondary font-bold text-lg">Ticket Packages</label>
+                            <button type="button" className="p-2 gap-2 flex text-text_secondary rounded cursor-pointer hover:opacity-75" onClick={()=>{setSection('tickets')}}>
+                                <TiBook size={20} className="mt-1"/> Add ticket
+                            </button>
+                        </div>
+                        
                         <div className="lg:grid lg:grid-cols-2 gap-2 w-full mx-auto my-4 pr-2">
                             <div className='border border-1 border-text_secondary_2 px-2 py-2 rounded-lg my-2'>
                                 <label className='text-xs font-bold text-text_primary dark:text-gray-400 uppercase'>REGULAR</label>
                                 <div className='flex justify-between'>
                                     <h3 className="text-lg font-medium text-text_secondary">5000 RF</h3>
-                                    <button className=' px-4 rounded-lg text-text_secondary border border-text_secondary_2 hover:font-bold  transition-all duration-150 text-xs py-1'>Remove Ticket</button>
+                                    <button className=' px-4 rounded-lg text-text_secondary border border-text_secondary_2  transition-all duration-150 text-xs py-1'>Remove Ticket</button>
                                 </div>
                             </div>
                         </div>        
@@ -130,12 +135,10 @@ export default function PlotsModal(props) {
                     </div>
                 </div>
                 
-                <div className="flex items-center justify-between w-full stick my-2">
+                <div className="flex items-center justify-between w-full sticky bottom-0 px-4 bg-secondary py-4">
                     <button className="focus:outline-none transition duration-150 ease-in-out hover:bg-indigo-600 bg-btn_primary text-secondary rounded-md px-4 py-2 text-sm"><AiOutlineSend size={20}/> </button>
                     <div className="relative flex justify-end gap-2">
-                        <button type="button" className="p-2 gap-2 flex text-text_secondary rounded cursor-pointer hover:opacity-75" onClick={()=>{setSection('tickets')}}>
-                            <TiBook size={20} className="mt-1"/> Add ticket
-                        </button>
+
                         <button type="button" className="p-2 text-text_secondary rounded cursor-pointer hover:opacity-75" onClick={()=>{setSection('stickers')}}>
                             <BsEmojiSmile size={20}/>
                         </button>
@@ -151,7 +154,7 @@ export default function PlotsModal(props) {
 
             {section==='tickets'&& 
                 <div className="stickers">
-                    <div className=" flex justify-start text-text_secondary">
+                    <div className=" flex justify-start text-text_secondary px-4 py-4">
                         <div className="cursor-pointer text-gray-400 hover:text-gray-600 transition duration-150 ease-in-out" onClick={()=>setSection('post')}>
                             <BiArrowBack size={20}/>
                         </div>
@@ -160,7 +163,7 @@ export default function PlotsModal(props) {
                         </div>
                     </div>
 
-                    <form className="rounded-lg drop-shadow py-4 border px-4 w-4/5 mx-auto py-2 my-24 border-dashed border-text_secondary_2">
+                    <form className="rounded-lg drop-shadow border px-4 w-4/5 mx-auto py-2 my-24 border-dashed border-text_secondary_2">
                         <div className="block w-full mb-4">
                             <label for="Title" className="text-text_secondary font-bold text-lg">Ticket title</label>
                             <input type="text" id="Title" name="title" className="px-2 my-4 w-full rounded-md text-sm text-text_secondary bg-secondary border-1 border-text_secondary_2 " placeholder="Ticket title..." required/>

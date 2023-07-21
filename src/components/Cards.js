@@ -24,10 +24,8 @@ export default function Cards(props) {
 
 
     const options = {
-        stagePadding: 15,
-        margin: 24,
-        nav: false,
-        navText: ["<div class='nav-button owl-prev sm:hidden'>‹</div>", "<div class='nav-button owl-next sm:hidden'>›</div>"],
+        nav: true,
+        navText: ["<div class='bg-btn_primary text-secondary w-8 h-8 rounded-full absolute inset-y-40 left-0 text-xl'>‹</div>", "<div class='bg-btn_primary text-secondary w-8 h-8 rounded-full absolute inset-y-40 right-0 text-xl'>›</div>"],
         // autoplay: true,
         dots: false,
         // autoplayTimeout: 8500,
@@ -49,18 +47,37 @@ export default function Cards(props) {
 
   return (
     <div className='w-full relative mx-auto'>
-    <h3 className='px-8 py-3 font-bold text-btn_primary opacity-70'>{props.category}</h3>
-    <OwlCarousel className="w-full relative " {...options} >
-      {movies.map((src,index)=>{
-        return(
-          <Color key={src} src={src} format="hex" crossOrigin='*'>
-            {( data, loading, error) => (
-              <Card image={src} bg={data?.data}/>
-            )}
-          </Color>
-        )
-        })}
-    </OwlCarousel>
+      <div className='flex justify-start gap-4 mb-2'>
+        <div className='w-full flex justify-start py-2 text-sm text-text_secondary gap-4'>
+          <div className={`px-2 h-8 py-1 rounded-xl bg-text_secondary_2 border-text_secondary_2 hover:bg-text_secondary_2 cursor-pointer hover:text-text_primary transition duration-150 ease-in-out`}>
+            <p>All</p>
+          </div>
+          <div className={`px-2 h-8 py-1 rounded-xl border-text_secondary_2 hover:bg-text_secondary_2 cursor-pointer hover:text-text_primary transition duration-150 ease-in-out`}>
+            <p>Upcoming</p>
+          </div>
+          <div className={`px-2 h-8 py-1 rounded-xl border-text_secondary_2 hover:bg-text_secondary_2 cursor-pointer hover:text-text_primary transition duration-150 ease-in-out`}>
+            <p>Music</p>
+          </div>
+          <div className={`px-2 h-8 py-1 rounded-xl border-text_secondary_2 hover:bg-text_secondary_2 cursor-pointer hover:text-text_primary transition duration-150 ease-in-out`}>
+            <p>Comedy</p>
+          </div>
+          <div className={`px-2 h-8 py-1 rounded-xl border-text_secondary_2 hover:bg-text_secondary_2 cursor-pointer hover:text-text_primary transition duration-150 ease-in-out`}>
+            <p>Sports</p>
+          </div>
+
+        </div>
+      </div>
+      <OwlCarousel className="w-full relative" {...options} >
+        {movies.map((src,index)=>{
+          return(
+            <Color key={src} src={src} format="hex" crossOrigin='*'>
+              {( data, loading, error) => (
+                <Card image={src} bg={data?.data}/>
+              )}
+            </Color>
+          )
+          })}
+      </OwlCarousel>
     </div>
   )
 }
